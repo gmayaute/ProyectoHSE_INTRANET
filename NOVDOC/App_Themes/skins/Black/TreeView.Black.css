@@ -1,0 +1,253 @@
+/*
+
+RadTreeView Black skin
+
+* For notes on some CSS class names, please check RadTreeView common skin file *
+
+*/
+
+/* general styles */
+
+.RadTreeView_Black,
+.RadTreeView_Black a.rtIn,
+.RadTreeView_Black .rtEdit .rtIn input
+{
+	font:11px "segoe ui",tahoma,arial,sans-serif;
+	color:#9f9f9f;
+	line-height:1.273em;
+}
+
+.RadTreeView_Black .rtTop, 
+.RadTreeView_Black .rtMid, 
+.RadTreeView_Black .rtBot
+{
+	padding: 0 0 0 15px;
+}
+
+.RadTreeView_Black .rtUL .rtLI .rtUL 
+{
+	padding-left: 15px;
+}
+
+.RadTreeView_Black .rtPlus, 
+.RadTreeView_Black .rtMinus
+{
+	margin:5px 1px 0 -10px;
+	width:9px;
+	height:9px;
+}
+
+.RadTreeView_Black .rtPlus
+{
+	background: transparent url(TreeView/PlusMinus.gif) no-repeat 0 0;
+}
+
+.RadTreeView_Black .rtMinus
+{
+	background: transparent url(TreeView/PlusMinus.gif) no-repeat 0 -9px;
+}
+
+.RadTreeView_Black .rtSp
+{
+	height:20px;
+}
+
+.RadTreeView_Black .rtChk
+{
+	margin: 0 2px;
+	padding:0;
+	width:12px;
+	height:12px;
+}
+
+.RadTreeView_Black .rtIn
+{
+	margin-left:3px;
+	padding: 2px 3px;
+	text-decoration:none;
+}
+
+/* endof general styles */
+
+/*Three state checkboxes*/
+
+.RadTreeView_Black .rtIndeterminate
+{
+    background: transparent url(TreeView/TriState.gif) no-repeat 0 -26px;
+}
+
+.RadTreeView_Black .rtChecked
+{
+    background: transparent url(TreeView/TriState.gif) no-repeat 0 0;
+}
+
+.RadTreeView_Black .rtUnchecked
+{
+    background: transparent url(TreeView/TriState.gif) no-repeat 0 -13px ;
+}
+
+/* node states */
+
+.RadTreeView_Black .rtHover .rtIn
+{
+	background: #232323;
+	color: #fff;
+}
+
+.RadTreeView_Black .rtSelected .rtIn
+{
+	background-color:#3E3E3E;
+	color:#9f9f9f;
+}
+
+.RadTreeView_Black_disabled .rtIn,
+.RadTreeView_Black .rtDisabled .rtIn
+{
+	color:#666;
+}
+
+.RadTreeView_Black .rtSelected .rtLoadingBelow
+{
+	background-color:#3E3E3E;
+}
+
+/* endof node states */
+
+
+/* in-line editing */
+
+.RadTreeView_Black .rtLI .rtEdit .rtIn
+{
+	border:1px solid #999;
+	padding: 0 2px;
+	height:1.2em;
+	background: #fff;
+	text-decoration: none;
+	text-decoration:none;
+}
+
+.RadTreeView_Black .rtEdit .rtIn input
+{
+	height:1em;
+	line-height:1em;
+	border:0;
+	margin:0;
+	padding:0;
+	background:transparent;
+}
+
+/* endof in-line editing */
+
+
+/* drop targets */
+
+.rtDropAbove_Black,
+.rtDropBelow_Black
+{
+    border: 1px dotted black;
+    font-size: 3px;
+    line-height: 3px;
+    height: 3px;
+}
+
+.rtDropAbove_Black
+{
+    border-bottom: 0;
+}
+
+.rtDropBelow_Black
+{
+    border-top: 0;
+}
+
+/* endof drop targets */
+
+
+/* rtl-specific styles */
+
+.RadTreeView_Black_rtl .rtPlus
+{
+	background: transparent url(TreeView/PlusMinus.gif) no-repeat -9px 0;
+}
+
+.RadTreeView_Black_rtl .rtMinus
+{
+	background: transparent url(TreeView/PlusMinus.gif) no-repeat -9px -9px;
+}
+
+/* firefox 2.0 */
+
+.RadTreeView_Black_rtl .rtPlus,
+.RadTreeView_Black_rtl .rtMinus,
+x:-moz-any-link 
+{
+	margin-right:-9px;
+	right:-8px;
+}
+
+/* firefox 3.0 */
+
+.RadTreeView_Black_rtl .rtPlus,
+.RadTreeView_Black_rtl .rtMinus,
+x:-moz-any-link, x:default
+{
+	margin-right:0;
+	right:-10px;
+}
+
+* html .RadTreeView_Black_rtl .rtPlus,
+* html .RadTreeView_Black_rtl .rtMinus
+{
+	margin-right:-10px;
+	right:0;
+}
+
+*+html .RadTreeView_Black_rtl .rtPlus,
+*+html .RadTreeView_Black_rtl .rtMinus
+{
+	margin-right:-10px;
+	right:0;
+}
+
+.RadTreeView_Black_rtl .rtTop,
+.RadTreeView_Black_rtl .rtMid, 
+.RadTreeView_Black_rtl .rtBot
+{
+	padding: 0 15px 2px 0;
+	margin:0;
+}
+
+/* endof rtl-specific styles */
+
+
+/* hacks for Opera & Safari */
+@media screen and (min-width:550px)
+{
+	/* fixes for opera (changes the paddings/margins automatically in rtl mode) */
+
+	html:first-child .RadTreeView_Black_rtl .rtPlus,
+	html:first-child .RadTreeView_Black_rtl .rtMinus,
+	html:first-child .RadTreeView_Black_rtl .rtFirst .rtLI .rtPlus,
+	html:first-child .RadTreeView_Black_rtl .rtFirst .rtLI .rtMinus
+	{
+		margin:5px 1px 0 -10px;
+		right:0;
+	}
+	
+	/* fix for safari bug (inline-block positioned elements in rtl mode get no width) */
+	:root .RadTreeView_Black_rtl .rtPlus,
+	:root .RadTreeView_Black_rtl .rtMinus
+	{
+		right: 0;
+		margin-right: -10px;
+		margin-left: 1px;
+	}
+}
+
+/* endof hacks */
+.RadTreeView_Black_designtime .rtPlus,
+.RadTreeView_Black_designtime .rtMinus
+{
+	left:3px;
+	top:4px;
+}

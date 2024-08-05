@@ -1,0 +1,41 @@
+<%--
+Plantilla de máscara predeterminada. Las siguientes máscaras se proporcionan sólo como ejemplos.
+
+1. Máscara de control con nombre. SkinId debería definirse de forma única porque
+no se permite que haya varios SkinId por tipo de control en el mismo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Máscara predeterminada. Skinid no está definido Sólo se permite 
+   una máscara de control por tipo de control en el mismo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:DropDownList runat="server" Height="21px" width="144px" CssClass="stlCajaTexto"/>
+<asp:TextBox runat="server" width="140px" CssClass="stlCajaTexto"/>
+
+
+
+<%-- Apariencia de los Botones --%> 
+
+<asp:Button runat="server" CssClass="button" SkinID="BotonEstandar"/>
+<asp:Button runat="server" CssClass="st_BotonActivado" SkinID="BotonActivado" />
+<asp:Button runat="server" CssClass="st_BotonDesactivado" SkinID="BotonDesactivado" />
+
+
+<asp:Label runat="server" CssClass="st_LabelActivado"  SkinID="LabelActivado" />
+
+
+<%-- Default GridView --%>
+<asp:GridView SkinID="GridZX" runat="server" GridLines="None" padding-right="5px" BackColor="White" BorderColor="#DEDFDE" CellPadding="1">
+	<RowStyle CssClass="stlPaginaTexto" BackColor="WhiteSmoke" />
+    <HeaderStyle HorizontalAlign="Center" CssClass="CabeceraGridView1" ForeColor="White"  BackColor="#6699CC"  Font-Bold="True" />
+    <AlternatingRowStyle BackColor="White" />
+    <PagerStyle CssClass="stlPaginaTexto" Font-Bold="True" />
+    <PagerSettings Mode="NumericFirstLast" />
+    <FooterStyle CssClass="stlPaginaTexto" BackColor="WhiteSmoke"></FooterStyle>
+</asp:GridView>
+

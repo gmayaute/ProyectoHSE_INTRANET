@@ -1,0 +1,148 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="NOVDOC.Site" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Sistema Control Documentario NOVPeru</title>
+
+<%-- <link href="App_Themes/Estilos/Estilos.css" rel="stylesheet" type="text/css" />--%>
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="Form1" runat="server">
+
+    <asp:ScriptManager ID="ScriptManager2" runat="server" AsyncPostBackTimeout="3000" EnableScriptGlobalization="True"
+        EnablePageMethods="true">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+        </Scripts>
+    </asp:ScriptManager>
+
+    <telerik:RadWindowManager ID="RadWindowManager1" runat="server" Modal="true"  Skin="Sunset"  ShowContentDuringLoad="false" VisibleStatusbar="false" ReloadOnShow="true"    Behaviors="Close"     ></telerik:RadWindowManager>
+
+    <div class="Principal" >
+        <%--  <div class="CabeceraMaster">--%>
+            <table style="width:100%;vertical-align:top"  cellpadding="0" border="0" cellspacing="0">
+            <tr style="width:100%">
+                <td style="width:50%; text-align:left;">
+                   <asp:Image ID="Image1" runat="server" 
+                        ImageUrl="~/App_Themes/Imagenes/logoOilfinal.png"  Height="40px" Width="380px"  />
+                </td>
+                <td style="width:50%;text-align:right;">  
+                      <asp:Image ID="Image2" ImageUrl="~/App_Themes/Imagenes/FINANCE_main_banner_rightfinal.jpg"  runat="server"  Width="300px" Height="50px"/>
+                </td> 
+            </tr>
+            </table>
+	
+ <%--     </div>--%>
+
+<%--      <div class="CabeceraMaster">--%>
+      
+        <table style="width:100%;vertical-align:top"  cellspacing="0"  border="0"  cellpadding="0">
+ 
+             <tr  style="width:100%; height:2px;" >
+                    <td class="division" colspan="3" >  
+                   
+                   </td>  
+             </tr>
+             <tr  style="width:100%">
+              <td  style="text-align:left; width:6%;">
+                   <asp:UpdatePanel ID="UpMenuSecundario" runat="server" UpdateMode="Conditional">
+                          <ContentTemplate>
+                            <asp:ImageButton ID="ImgInformacion" runat="server" 
+                                  ImageUrl="~/App_Themes/Imagenes/Informacion.jpg" 
+                                  ToolTip="Información HSE" style ="height:16px"  />
+                           <asp:ImageButton ID="ImgMenu" runat="server"  
+                           ImageUrl="~/App_Themes/Imagenes/Menu.gif" ToolTip="Visualizar Menú"  
+                           style ="width:16px ; height:16px"  />
+                           <asp:ImageButton ID="ImgSalir" runat="server" 
+                                  ImageUrl="~/App_Themes/Imagenes/exit.ico" 
+                                  ToolTip="Salir del Sistema" style ="height:16px"  />
+                          </ContentTemplate> 
+                        </asp:UpdatePanel>
+              </td>
+                 <td style="text-align:left;width:15%;font:8px/1.4em Arial, Helvetica, sans-serif" >  
+                  <asp:Label ID="lblUsuario" Text="" runat="server" SkinID ="LabelActivado" ForeColor="#000000"/> 
+                   </td>
+              <td style="text-align:center;">  
+                   &nbsp;</td>
+            
+             </tr>
+        </table>
+        <%--</div>--%>
+
+
+                    <div style="height:100%">
+                        <div Id="DivMenuPrincipal" runat= "server" style="height:100%;">
+                          <table style= "width:100%; height:100%" cellspacing="0" cellpadding="0">
+                            <tr  style= "width:100%; height:100%">
+                                 <td id="tdMenu"   style="width:15% ;text-align:left;vertical-align:top; display:none">  
+                                         <asp:UpdatePanel ID="upcontenido" runat="server" UpdateMode="Conditional" >
+                                            <ContentTemplate>
+                                                  <telerik:RadTreeView ID="RadTreeView" runat="server" >
+                                                  </telerik:RadTreeView>
+                                            </ContentTemplate> 
+                                         </asp:UpdatePanel> 
+                                 </td>
+ 
+                                <td onmouseover="javascript:Expandir_ContraerTd(this,'tdMenu');"  style="width:4px">
+
+                                    <%--<asp:Image ID="Image2" ImageUrl="~/App_Themes/Imagenes/Collapse.jpg"  runat="server"   onclick="return Expandir_ContraerTd(this,'tdMenu')"/>
+                                  --%>
+                                   <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                                            <ContentTemplate>
+                                             <asp:ImageButton ID="ImgCollapse" runat="server" ImageUrl="~/App_Themes/Imagenes/Collapse.jpg"  OnClientClick="return Expandir_ContraerTd(this,'tdMenu')"    />
+                                            </ContentTemplate> 
+                                    </asp:UpdatePanel> 
+                                </td>
+
+                                <td style=" height:600px; text-align:center; vertical-align:top;">  
+                                        <div class= "JER_CONTE_body" id="main" style="overflow:auto;">
+                                                  <asp:ContentPlaceHolder ID="mainContent" runat="server" >
+                                                      <p>
+                                                       <asp:TextBox ID="txt_id" runat="server"></asp:TextBox>
+                                                      </p>
+                                                  </asp:ContentPlaceHolder>
+                                        </div>
+                                </td>
+
+                            </tr>
+                          </table> 
+      
+                          </div>
+
+
+<%--                          <div Id="DivPortalInformacion" runat ="server" style="height:100%;">
+                              <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                          </div> --%>
+
+
+                    </div>
+
+            
+
+<%--      <div class="CabeceraMaster" style="width:100%" >
+           <span class="stlPaginaTextoBlanco">.</span>
+      </div>--%>
+
+
+      <table style="width:100%;vertical-align:top"  cellspacing="0"  border="0"  cellpadding="0">
+             <tr style="width:100%">
+               <td class="LineaAzul" style="width:50%;text-align:left;font: 11px/1.4em Arial, Helvetica, sans-serif">  
+                   ©National Oilwell Varco - <asp:Label ID="lblFecha" runat="server" Text=""></asp:Label> - Todos
+                    los derechos reservados
+               </td>
+             </tr> 
+      </table>
+
+    </div>
+
+    
+    </form>
+</body>
+</html>

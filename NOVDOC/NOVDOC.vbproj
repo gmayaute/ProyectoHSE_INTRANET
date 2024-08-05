@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{A15B4A4A-0012-4BA9-8043-A9EA8742CE39}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NOVDOC</RootNamespace>
+    <AssemblyName>NOVDOC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NOVDOC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NOVDOC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Impersonalizacion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Impersonalizacion.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NOVHSE.BusinessEntities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NOVHSE.BusinessEntities\bin\Debug\NOVHSE.BusinessEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="NOVHSE.BusinessLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NOVHSE.BusinessLogic\bin\Debug\NOVHSE.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="NOVHSE.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NOVHSE. DataAccess\bin\Debug\NOVHSE.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="NOVHSE.Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NOVHSE.Seguridad\bin\Debug\NOVHSE.Seguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="Reutilizables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reutilizables\bin\Debug\Reutilizables.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.Design, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_Themes\Estilos\Estilos.css" />
+    <Content Include="App_Themes\Estilos\TreeView\Black.gif" />
+    <Content Include="App_Themes\Estilos\TreeView\PlusMinus.gif" />
+    <Content Include="App_Themes\Estilos\TreeView\TriState.gif" />
+    <Content Include="App_Themes\Imagenes\Actualizar01.gif" />
+    <Content Include="App_Themes\Imagenes\admin_16.gif" />
+    <Content Include="App_Themes\Imagenes\Admiracion01.gif" />
+    <Content Include="App_Themes\Imagenes\Advertencia.JPG" />
+    <Content Include="App_Themes\Imagenes\AgregarHijo.bmp" />
+    <Content Include="App_Themes\Imagenes\AgregarSimilar.bmp" />
+    <Content Include="App_Themes\Imagenes\arrow_down.png" />
+    <Content Include="App_Themes\Imagenes\arrow_up.png" />
+    <Content Include="App_Themes\Imagenes\BajarNivel.bmp" />
+    <Content Include="App_Themes\Imagenes\BotonActivado.bmp" />
+    <Content Include="App_Themes\Imagenes\BotonBase.GIF" />
+    <Content Include="App_Themes\Imagenes\BotonDesactivado.bmp" />
+    <Content Include="App_Themes\Imagenes\bt_Estandar.gif" />
+    <Content Include="App_Themes\Imagenes\bt_impresora.bmp" />
+    <Content Include="App_Themes\Imagenes\calendar.gif" />
+    <Content Include="App_Themes\Imagenes\Cancel.bmp" />
+    <Content Include="App_Themes\Imagenes\cerrar.gif" />
+    <Content Include="App_Themes\Imagenes\check01.gif" />
+    <Content Include="App_Themes\Imagenes\CheckList.png" />
+    <Content Include="App_Themes\Imagenes\CheckList01.gif" />
+    <Content Include="App_Themes\Imagenes\Clip01.bmp" />
+    <Content Include="App_Themes\Imagenes\ClipRedondo.jpg" />
+    <Content Include="App_Themes\Imagenes\ClipRedondo.png" />
+    <Content Include="App_Themes\Imagenes\Collapse.jpg" />
+    <Content Include="App_Themes\Imagenes\confreporte.jpg" />
+    <Content Include="App_Themes\Imagenes\Declinar.gif" />
+    <Content Include="App_Themes\Imagenes\degrad_red.jpg" />
+    <Content Include="App_Themes\Imagenes\delete.gif" />
+    <Content Include="App_Themes\Imagenes\descarga-excel-macro.gif" />
+    <Content Include="App_Themes\Imagenes\Documentacion.jpg" />
+    <Content Include="App_Themes\Imagenes\documento.PNG" />
+    <Content Include="App_Themes\Imagenes\Editar01.bmp" />
+    <Content Include="App_Themes\Imagenes\ejecutar.png" />
+    <Content Include="App_Themes\Imagenes\Entregado.PNG" />
+    <Content Include="App_Themes\Imagenes\Espera.gif" />
+    <Content Include="App_Themes\Imagenes\excel-viewer.jpg" />
+    <Content Include="App_Themes\Imagenes\exit.ico" />
+    <Content Include="App_Themes\Imagenes\Expand.jpg" />
+    <Content Include="App_Themes\Imagenes\expMax01.gif" />
+    <Content Include="App_Themes\Imagenes\expMin01.gif" />
+    <Content Include="App_Themes\Imagenes\factura-electronica.jpg" />
+    <Content Include="App_Themes\Imagenes\FINANCE_main_banner_rightfinal.jpg" />
+    <Content Include="App_Themes\Imagenes\finanzas.jpg" />
+    <Content Include="App_Themes\Imagenes\flecha.JPG" />
+    <Content Include="App_Themes\Imagenes\FlechaDer_02.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaDer_03.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaDer_04.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaDer_05.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaIzq_02.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaIzq_03.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaIzq_04.gif" />
+    <Content Include="App_Themes\Imagenes\FlechaIzq_05.gif" />
+    <Content Include="App_Themes\Imagenes\Flujo01.gif" />
+    <Content Include="App_Themes\Imagenes\Guardar.bmp" />
+    <Content Include="App_Themes\Imagenes\hse1.jpg" />
+    <Content Include="App_Themes\Imagenes\hse2.jpg" />
+    <Content Include="App_Themes\Imagenes\hse3.jpg" />
+    <Content Include="App_Themes\Imagenes\HSE_insignia.jpg" />
+    <Content Include="App_Themes\Imagenes\HSE_main_banner_right.png" />
+    <Content Include="App_Themes\Imagenes\HSE_main_banner_rightfinal.png" />
+    <Content Include="App_Themes\Imagenes\hse_page_title.jpg" />
+    <Content Include="App_Themes\Imagenes\hse_portada.jpg" />
+    <Content Include="App_Themes\Imagenes\ico_Borrar.gif" />
+    <Content Include="App_Themes\Imagenes\ico_Edita.gif" />
+    <Content Include="App_Themes\Imagenes\Info01.gif" />
+    <Content Include="App_Themes\Imagenes\Info02.gif" />
+    <Content Include="App_Themes\Imagenes\Informacion.jpg" />
+    <Content Include="App_Themes\Imagenes\Lectura.png" />
+    <Content Include="App_Themes\Imagenes\Lectura00.gif" />
+    <Content Include="App_Themes\Imagenes\Lectura01.gif" />
+    <Content Include="App_Themes\Imagenes\Lectura02.gif" />
+    <Content Include="App_Themes\Imagenes\Lectura03.gif" />
+    <Content Include="App_Themes\Imagenes\Lectura04.gif" />
+    <Content Include="App_Themes\Imagenes\Lectura05.gif" />
+    <Content Include="App_Themes\Imagenes\Lectura06.gif" />
+    <Content Include="App_Themes\Imagenes\LineaBorrar.bmp" />
+    <Content Include="App_Themes\Imagenes\LineBar02.bmp" />
+    <Content Include="App_Themes\Imagenes\LineBarDoble.jpg" />
+    <Content Include="App_Themes\Imagenes\Loading_01.gif" />
+    <Content Include="App_Themes\Imagenes\logoOil.png" />
+    <Content Include="App_Themes\Imagenes\logoOilfinal.png" />
+    <Content Include="App_Themes\Imagenes\Lupa02.gif" />
+    <Content Include="App_Themes\Imagenes\MailSalida.gif" />
+    <Content Include="App_Themes\Imagenes\Mas01.bmp" />
+    <Content Include="App_Themes\Imagenes\Mas02.bmp" />
+    <Content Include="App_Themes\Imagenes\Menos01.bmp" />
+    <Content Include="App_Themes\Imagenes\Menu.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ARW02LT.ico" />
+    <Content Include="App_Themes\Imagenes\Menu\ARW02RT.ico" />
+    <Content Include="App_Themes\Imagenes\Menu\FOLDER.ICO" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2blank.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2doc.bmp" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2doc.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2folderclosed.bmp" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2folderclosed.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2folderclosed1.GIF" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2folderopen.bmp" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2folderopen.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2lastnode.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2mlastnode.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2mnode.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2node.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2plastnode.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2pnode.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\ftv2vertline.gif" />
+    <Content Include="App_Themes\Imagenes\Menu\GRAPH14.ICO" />
+    <Content Include="App_Themes\Imagenes\Monedas01.gif" />
+    <Content Include="App_Themes\Imagenes\Monedas02.gif" />
+    <Content Include="App_Themes\Imagenes\myNOV.jpg" />
+    <Content Include="App_Themes\Imagenes\NationaLogoColorRGB.jpg" />
+    <Content Include="App_Themes\Imagenes\NationalOilwellVarcoLogoColorRGB.jpg" />
+    <Content Include="App_Themes\Imagenes\next2.gif" />
+    <Content Include="App_Themes\Imagenes\notebook.png" />
+    <Content Include="App_Themes\Imagenes\novfondo.JPG" />
+    <Content Include="App_Themes\Imagenes\NOVStackedColorLogoRGB.jpg" />
+    <Content Include="App_Themes\Imagenes\NOVWorldmarkColorLogoRGB.jpg" />
+    <Content Include="App_Themes\Imagenes\PreFormato.png" />
+    <Content Include="App_Themes\Imagenes\previous2.gif" />
+    <Content Include="App_Themes\Imagenes\rechazar.jpg" />
+    <Content Include="App_Themes\Imagenes\rechazar.png" />
+    <Content Include="App_Themes\Imagenes\Recibido.PNG" />
+    <Content Include="App_Themes\Imagenes\Reloj01.gif" />
+    <Content Include="App_Themes\Imagenes\relojito.png" />
+    <Content Include="App_Themes\Imagenes\Salir.png" />
+    <Content Include="App_Themes\Imagenes\secc_cursos.jpg" />
+    <Content Include="App_Themes\Imagenes\secc_EPP.jpg" />
+    <Content Include="App_Themes\Imagenes\secc_medico.jpg" />
+    <Content Include="App_Themes\Imagenes\secc_seguros.jpg" />
+    <Content Include="App_Themes\Imagenes\Seleccionar.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaAmarilla.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaAmarilla_Check.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaAzul.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaAzul_Check.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaRoja.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaRoja_Check.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaVerde.gif" />
+    <Content Include="App_Themes\Imagenes\Semaforo\EsferaVerde_Check.gif" />
+    <Content Include="App_Themes\Imagenes\SubirNivel.bmp" />
+    <Content Include="App_Themes\Imagenes\Tijeras.gif" />
+    <Content Include="App_Themes\Imagenes\Validacion01.gif" />
+    <Content Include="App_Themes\Imagenes\ValidarMail.bmp" />
+    <Content Include="App_Themes\JavaScript\aes.js" />
+    <Content Include="App_Themes\JavaScript\ajaxupload.3.5.js" />
+    <Content Include="App_Themes\JavaScript\dialog.js" />
+    <Content Include="App_Themes\JavaScript\dw_cookies.js" />
+    <Content Include="App_Themes\JavaScript\dw_sizerdx.js" />
+    <Content Include="App_Themes\JavaScript\fileuploader.js" />
+    <Content Include="App_Themes\JavaScript\Funciones.js" />
+    <Content Include="App_Themes\JavaScript\jquery-1.4.1-vsdoc.js" />
+    <Content Include="App_Themes\JavaScript\jquery-1.4.1.js" />
+    <Content Include="App_Themes\JavaScript\jquery-1.4.1.min.js" />
+    <Content Include="App_Themes\JavaScript\jquery-cookie.js" />
+    <Content Include="App_Themes\JavaScript\jquery-ui.js" />
+    <Content Include="App_Themes\JavaScript\jquery-validate.js" />
+    <Content Include="App_Themes\JavaScript\jquery.corner.js" />
+    <Content Include="App_Themes\JavaScript\jquery.flash.js" />
+    <Content Include="App_Themes\JavaScript\jquery.js" />
+    <Content Include="App_Themes\JavaScript\jquery.maskedinput.js" />
+    <Content Include="App_Themes\JavaScript\jquery.numeric.js" />
+    <Content Include="App_Themes\JavaScript\jquery.simplemodal.js" />
+    <Content Include="App_Themes\JavaScript\swfobject.js" />
+    <Content Include="App_Themes\JavaScript\tooltip.js" />
+    <Content Include="App_Themes\JavaScript\Utiles.js" />
+    <Content Include="App_Themes\skins\Black\TreeView.Black.css" />
+    <Content Include="App_Themes\skins\Black\TreeView.css" />
+    <Content Include="App_Themes\skins\Black\TreeView\Black.gif" />
+    <Content Include="App_Themes\skins\Black\TreeView\PlusMinus.gif" />
+    <Content Include="App_Themes\skins\Black\TreeView\TriState.gif" />
+    <Content Include="EndSession.aspx" />
+    <Content Include="ErrorNOV.aspx" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Mantenimiento\AlertaSuministro.aspx" />
+    <Content Include="Mantenimiento\AlertaSuministroLicencia.aspx" />
+    <Content Include="Mantenimiento\MantEmail.aspx" />
+    <Content Include="Popup\PopudBuscarEmpleado.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\IONOV.vb" />
+    <Compile Include="App_Code\PaginaBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Utiles.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EndSession.aspx.designer.vb">
+      <DependentUpon>EndSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EndSession.aspx.vb">
+      <DependentUpon>EndSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorNOV.aspx.designer.vb">
+      <DependentUpon>ErrorNOV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorNOV.aspx.vb">
+      <DependentUpon>ErrorNOV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\AlertaSuministro.aspx.designer.vb">
+      <DependentUpon>AlertaSuministro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\AlertaSuministro.aspx.vb">
+      <DependentUpon>AlertaSuministro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\AlertaSuministroLicencia.aspx.designer.vb">
+      <DependentUpon>AlertaSuministroLicencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\AlertaSuministroLicencia.aspx.vb">
+      <DependentUpon>AlertaSuministroLicencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\MantEmail.aspx.designer.vb">
+      <DependentUpon>MantEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\MantEmail.aspx.vb">
+      <DependentUpon>MantEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Popup\PopudBuscarEmpleado.aspx.designer.vb">
+      <DependentUpon>PopudBuscarEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\PopudBuscarEmpleado.aspx.vb">
+      <DependentUpon>PopudBuscarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Estilos\Default.skin" />
+    <None Include="App_Themes\Imagenes\Menu\Thumbs.db" />
+    <None Include="App_Themes\Imagenes\Menu\vssver2.scc" />
+    <None Include="App_Themes\Imagenes\Thumbs.db" />
+    <None Include="App_Themes\skins\Black\TreeView\Thumbs.db" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>46152</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
